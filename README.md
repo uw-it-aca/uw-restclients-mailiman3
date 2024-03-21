@@ -1,5 +1,4 @@
 # REST client for the Mailman3 Core REST API
-# uw-restclients-mailiman3
 Library for interacting with Mailman3 REST API
 
 
@@ -20,6 +19,7 @@ To use this client, you'll need these settings in your application or script:
     RESTCLIENTS_MAILMAN3_MAIL_DOMAIN='lists.uw.edu'
 
 Optional settings:
+
     # Mailman3 Base Version
     RESTCLIENTS_MAILMAN3_BASE_VERSION='3.0'
 
