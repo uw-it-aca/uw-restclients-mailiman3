@@ -21,11 +21,6 @@ class Mailman3:
     def _list_url(self, list_name):
         return f"{self._url_base}/lists/{self._list_full_name(list_name)}"
 
-    def list_admin_url(self, list_id):
-        # list_id like: mikes-mm3-test.test.lists.uw.edu
-        return (f"https://{settings.get('CLUSTER_NAME')}"
-                f"/postorius/lists/{list_id}")
-
     def _fetch_lists(self, page=1, page_size=500):
         url = f"{self._url_base}/lists"
         return self._dao.get_resource(
