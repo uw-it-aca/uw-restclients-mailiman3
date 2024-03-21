@@ -51,3 +51,23 @@ class  Mailman3_DAO(DAO):
 
         raise ListNotFound(list_name)
 
+    def patch_resource(self, url, body):
+        try:
+            response = self.patchURL(url, body, {'Accept': 'application/json'})
+
+            logger.debug("PATCH {} ==status==> {}".format(url, response.status))
+
+            if response.status == 200:
+                logger.debug("PATCH {} ==data==> {}".format(url, response_data))
+                return json.loads(str(response.data))
+
+            if response.status != 404:
+                raise DataFailureException(
+                    list_url, response.status, response.data)
+
+        except DataFailureException as ex:
+            if ex.status != 404:
+                raise ex
+
+        raise ListNotFound(list_name)
+
