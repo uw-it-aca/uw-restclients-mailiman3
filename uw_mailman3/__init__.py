@@ -16,7 +16,7 @@ class Mailman3:
         self._dao = Mailman3_DAO()
 
     def _list_full_name(self, list_name):
-        return f"{list_name}@{settings.get('DOMAIN_NAME')}"
+        return f"{list_name}@{settings.get('MAIL_DOMAIN')}"
 
     def _list_url(self, list_name):
         return f"{self._url_base}/lists/{self._list_full_name(list_name)}"
