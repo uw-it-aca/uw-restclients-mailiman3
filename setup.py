@@ -21,8 +21,7 @@ setup(
     author_email="aca-it@uw.edu",
     include_package_data=True,
     install_requires=[
-        'UW-RestClients-Core~=1.3',
-        'djangorestframework==3.11.2',]
+        'UW-RestClients-Core~=1.3',]
     license='Apache License, Version 2.0',
     description=('An libraray for connecting to the mailman3 REST API'),
     long_description=README,
