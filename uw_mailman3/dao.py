@@ -6,7 +6,6 @@ from commonconf import settings
 from restclients_core.dao import DAO
 from restclients_core.exceptions import DataFailureException
 from restclients_core.exceptions import DataFailureException
-from uw_list_manager.dao import ListManager_DAO
 from uw_list_manager.models import List, ListExists
 from base64 import b64encode
 
