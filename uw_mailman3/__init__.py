@@ -3,10 +3,10 @@
 
 
 from commonconf import settings
+from uw_mailman3.models import List
 from uw_mailman3.dao import Mailman3_DAO
 from uw_mailman3.exceptions import ListNotFound
 from restclients_core.exceptions import DataFailureException
-from uw_list_manager.models import List, ListConfig
 from base64 import b64encode
 
 

@@ -4,9 +4,8 @@
 
 from commonconf import settings
 from restclients_core.dao import DAO
+from uw_mailman3.exceptions import ListNotFound
 from restclients_core.exceptions import DataFailureException
-from restclients_core.exceptions import DataFailureException
-from uw_list_manager.models import List, ListExists
 from base64 import b64encode
 
 
