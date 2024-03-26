@@ -11,8 +11,8 @@ from base64 import b64encode
 
 class  Mailman3_DAO(DAO):
     def __init__(self, *args, **kwargs):
-        user = settings.get('REST_USER')
-        password = settings.get('REST_PASSWORD')
+        user = getattr(settings, 'REST_USER')
+        password = getattr(settings, 'REST_PASSWORD', None)
         if not (user and password):
             raise Exception("REST_USER and REST_PASSWORD are required")
 
